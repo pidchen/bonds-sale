@@ -1,0 +1,12 @@
+1.单个接口上直接加上
+@Mapper注解：
+作用：在接口类上添加了@Mapper，在编译之后会生成相应的接口实现类 ，方法要与映射一直
+@Mapper
+public interface UserDAO {
+}
+
+2.批量扫描，注意一定要扫指定路径，Spring都会无效
+如果想要每个接口都要变成实现类，那么需要在每个接口类上加上@Mapper注解，
+
+@SpringBootApplication
+@MapperScan({"com.ssm.mapper","com.ssm.dao"})
